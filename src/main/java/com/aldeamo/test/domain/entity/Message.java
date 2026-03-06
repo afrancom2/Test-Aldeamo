@@ -7,6 +7,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -25,4 +27,6 @@ public class Message {
     @ManyToOne
     @JoinColumn(name = "origin_id")
     private OriginLine origin;
+
+    private LocalDateTime createdAt;
 }
